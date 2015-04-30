@@ -1,7 +1,8 @@
-import sublime, sublime_plugin
+import sublime
+import sublime_plugin
 
-class GistCreatorCommand(sublime_plugin.TextCommand):
-  def run(self, edit):
+class HelloWorldCommand(sublime_plugin.TextCommand):
+  def run(self, edit, cmd=None):
     print("hello world")
     self.view.insert(edit, 0, "Hello, World!")
     # for region in self.view.sel():
