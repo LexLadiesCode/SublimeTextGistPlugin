@@ -1,11 +1,9 @@
-import sublime
-import sublime_plugin
+import sublime, sublime_plugin
 
-class HelloWorldCommand(sublime_plugin.TextCommand):
+class GistCreatorCommand(sublime_plugin.TextCommand):
   def run(self, edit, cmd=None):
-    print("hello world")
-    self.view.insert(edit, 0, "Hello, World!")
-    # for region in self.view.sel():
-    #   line = self.view.line(region)
-    #   line_contents = self.view.substr(line) + "\n"
-    #   self.view.insert(edit, line.begin(), "hello world")
+    # Insert text in the file the user is editing, on the line where there cursor is
+    for region in self.view.sel():
+      line = self.view.line(region)
+      line_contents = self.view.substr(line) + "\n"
+      self.view.insert(edit, line.begin(), "hello world")
