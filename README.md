@@ -20,3 +20,7 @@ A plugin for Sublime Text to make Github Gists and get feedback.
         mklink "%APPDATA%\Sublime Text 2\Packages\User\Context.sublime-menu" "D:\Users\jbonewit\Documents\GitHub\SublimeTextGistPlugin\Context.sublime-menu"
 
 1. Right-click in Sublime Text to open a menu and click the 'Create a Github Gist' command.
+
+## How to Develop
+
+While developing the plugin, after you save the file, you will have to either 1) exit and reopen Sublime Text or 2) delete and recreate the symlinks. This will cause Sublime Text to reload your plugin and make your changes available.
