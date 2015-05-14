@@ -16,7 +16,7 @@ A plugin for Sublime Text to make Github Gists and get feedback.
 1. Open your Windows menu, find Command Prompt, right-click, and choose Run as Administrator
 1. In the Command Prompt enter commands like these, but replace `D:\Users\jbonewit\Documents\GitHub` with the path to where you cloned this repository:
 
-      mklink "%APPDATA%\Sublime Text 2\Packages\User\gist-creator.py" "D:\Users\jbonewit\Documents\GitHub\SublimeTextGistPlugin\gist-creator.py"
-      mklink "%APPDATA%\Sublime Text 2\Packages\User\Context.sublime-menu" "D:\Users\jbonewit\Documents\GitHub\SublimeTextGistPlugin\Context.sublime-menu"
+        mklink "%APPDATA%\Sublime Text 2\Packages\User\gist-creator.py" "D:\Users\jbonewit\Documents\GitHub\SublimeTextGistPlugin\gist-creator.py"
+        mklink "%APPDATA%\Sublime Text 2\Packages\User\Context.sublime-menu" "D:\Users\jbonewit\Documents\GitHub\SublimeTextGistPlugin\Context.sublime-menu"
 
 1. Right-click in Sublime Text to open a menu and click the 'Create a Github Gist' command.
