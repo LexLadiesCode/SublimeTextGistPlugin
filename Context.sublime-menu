@@ -1,5 +1,5 @@
 [
    { "caption": "-" },
-   { "caption": "Hello World", "command": "hello_world" },
+   { "caption": "Create a Github Gist", "command": "gist_creator" },
    { "caption": "-" }
 ]
