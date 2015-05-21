@@ -1,8 +1,12 @@
-import sublime, sublime_plugin, requests, json
+import sublime, sublime_plugin
+import sys
+import os.path
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "lib"))
+import requests, json
 
 class LexLadiesGistCreatorCommand(sublime_plugin.TextCommand):
   def run(self, edit, cmd=None):
-    # Insert text in the file the user is editing, on the line where their cursor is
     for region in self.view.sel():
       if not region.empty():
         gist_content = self.view.substr(region)
@@ -16,4 +20,6 @@ class LexLadiesGistCreatorCommand(sublime_plugin.TextCommand):
         description = 'A sample gist created from LexLadiesCode SublimeTextGistPlugin'
         data = json.dumps({'files': files, 'public': True, 'description': description})
         r = requests.post(url, data)
-        self.view.insert(edit, line.begin(), r.json)
+        json_response = r.json()
+        print(r.text)
+        print(json_response['html_url'])
