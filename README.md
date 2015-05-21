@@ -6,9 +6,8 @@ A plugin for Sublime Text to make Github Gists and get feedback.
 ### On OS X
 
 1. Create a symlink from where you have the repository checked out to where Sublime Text expects plugins to be.
-    1. In a Terminal, `cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User` -- this directory may be different if you are using a different version of Sublime Text
-    1. `ln -s ~/code/lexladiescode/SublimeTextGistPlugin/gist-creator.py .` -- the first path will change based on where you have the repository checked out
-    1. `ln -s ~/code/lexladiescode/SublimeTextGistPlugin/Context.sublime-menu .` to link the contextual menu
+    1. In a Terminal, `cd ~/Library/Application Support/Sublime Text 3/Packages` -- this directory may be different if you are using a different version of Sublime Text
+    1. `ln -s ~/code/lexladiescode/SublimeTextGistPlugin .` -- the first path will change based on where you have the repository checked out
 1. Right-click in Sublime Text to open a menu and click the 'Create a Github Gist' command.
 
 ### On Windows
