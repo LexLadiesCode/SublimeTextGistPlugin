@@ -1,0 +1,1 @@
+{"description": "A Sublime Text plugin to let you create a Github gist.", "dependencies": [], "url": "https://github.com/LexLadiesCode/SublimeTextGistPlugin", "platforms": ["*"], "version": "0.0.1", "sublime_text": ">=2000"}
