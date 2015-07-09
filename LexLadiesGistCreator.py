@@ -24,3 +24,10 @@ class LexLadiesGistCreatorCommand(sublime_plugin.TextCommand):
         json_response = r.json()
         print(r.text)
         print(json_response['html_url'])
+        gist_url = json_response['html_url']
+        self.display_gist(self.view, gist_url)
+  def display_gist(self, view, gist_url):
+    self._gist=gist_url
+    if hasattr(self, '_gist') and sublime.active_window():
+      sublime.active_window().active_view().set_status(self._STATUS_KEY, self._gist)
+  _STATUS_KEY="statusgist"
