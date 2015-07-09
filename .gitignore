@@ -1,1 +1,3 @@
 package-control.cleanup
+
+*.pyc
