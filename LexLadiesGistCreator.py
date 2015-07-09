@@ -12,8 +12,9 @@ class LexLadiesGistCreatorCommand(sublime_plugin.TextCommand):
         gist_content = self.view.substr(region)
         line = self.view.line(region)
         url = 'https://api.github.com/gists'
+        filename = self.view.file_name().split('/')[-1]
         files = {
-          'file1.txt': {
+            filename: {
             'content': gist_content
           }
         }
