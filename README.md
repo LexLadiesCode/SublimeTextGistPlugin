@@ -10,15 +10,15 @@ A plugin for Sublime Text to make Github Gists and get feedback.
 
     1. In a Terminal, navigate to where your Sublime Text packages are stored.
 
-    `cd ~/Library/Application Support/Sublime Text 3/Packages`
+      `cd ~/Library/Application Support/Sublime Text 3/Packages`
 
-    *Note:* This directory may be different if you are using a different version of Sublime Text.
+      *Note:* This directory may be different if you are using a different version of Sublime Text.
 
-    1. Use the following command to create a symlink from your current directory to the plugin directory.
+    2. Use the following command to create a symlink from your current directory to the plugin directory.
 
-    `ln -s ~/Code/SublimeTextGistPlugin .`
+      `ln -s ~/Code/SublimeTextGistPlugin .`
 
-    The path may change depending on where you cloned the plugin code. You can check your symlink with `ls -l`.
+      The path may change depending on where you cloned the plugin code. You can check your symlink with `ls -l`.
 
 1. **Test the plugin**- Open the developer console in Sublime Text. Go to the `View` menu and select `Show Console`. Then select some text and right-click to open a menu and navigate to the `LexLadies Gist Creator` command and click `Create Gist`.
 
