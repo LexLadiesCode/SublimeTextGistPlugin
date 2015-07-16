@@ -2,6 +2,7 @@
   "id": "LexLadiesGistCreator",
   "caption": "LexLadies Gist Creator",
   "children": [
-    {"caption": "Create Gist", "command": "lex_ladies_gist_creator"}
+    {"caption": "Create Gist", "command": "lex_ladies_gist_creator"},
+    {"caption": "Add Access Token", "command": "add_access_token"}
   ]
 }]

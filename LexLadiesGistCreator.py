@@ -7,6 +7,9 @@ import requests, json
 
 class LexLadiesGistCreatorCommand(sublime_plugin.TextCommand):
   def run(self, edit, cmd=None):
+    USER_SETTINGS_FILENAME = "SublimeTextGistPlugin.sublime-settings"
+    settings = sublime.load_settings(USER_SETTINGS_FILENAME)
+    self.github_token = settings.get("GitHubAccessToken")
     for region in self.view.sel():
       if not region.empty():
         gist_content = self.view.substr(region)
@@ -20,7 +23,11 @@ class LexLadiesGistCreatorCommand(sublime_plugin.TextCommand):
         }
         description = 'A sample gist created from LexLadiesCode SublimeTextGistPlugin'
         data = json.dumps({'files': files, 'public': True, 'description': description})
-        r = requests.post(url, data)
+        if self.github_token:
+          headers = {"Authorization": "token %s" % self.github_token}
+          r = requests.post(url, headers=headers, data=data)
+        else:
+          r = requests.post(url, data)
         json_response = r.json()
         print(r.text)
         print(json_response['html_url'])
