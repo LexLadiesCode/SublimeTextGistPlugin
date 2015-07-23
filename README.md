@@ -37,3 +37,23 @@ A plugin for Sublime Text to make Github Gists and get feedback.
 ## How to Develop
 
 While developing the plugin, if you are using a symlink you shouldn't have any problems. Otherwise, you may have to close and reopen Submline Text to redload your changes. This will cause Sublime Text to reload your plugin and make your changes available.
+
+### Hide Annoying Console Errors
+
+Package Control, Sublime Text's way of managing plugins, tries to delete directories
+and files that aren't installed plugins. It will throw an error in your console for
+LexLadiesGistCreator due to it being a symlinked directory.
+
+To prevent this annoying error from appearing:
+
+1. Open Package Control user settings by pressing `cmd-shift-P` and choosing Package Control > User Settings.
+
+2. Add the following:
+```
+"dirs_to_ignore":
+	[
+		"LexLadiesGistCreator"
+	],
+```
+
+3. Restart Sublime Text. You should still be able to run our GistCreator, but that error will go away.
