@@ -49,11 +49,11 @@ To prevent this annoying error from appearing:
 1. Open Package Control user settings by pressing `cmd-shift-P` and choosing Package Control > User Settings.
 
 2. Add the following:
-```
-"dirs_to_ignore":
-	[
-		"LexLadiesGistCreator"
-	],
-```
+	```
+	"dirs_to_ignore":
+		[
+			"LexLadiesGistCreator"
+		],
+	```
 
 3. Restart Sublime Text. You should still be able to run our GistCreator, but that error will go away.
