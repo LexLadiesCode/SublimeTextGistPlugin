@@ -15,7 +15,12 @@ class LexLadiesGistCreatorCommand(sublime_plugin.TextCommand):
         gist_content = self.view.substr(region)
         line = self.view.line(region)
         url = 'https://api.github.com/gists'
-        filename = self.view.file_name().split('/')[-1]
+
+        if self.view.file_name() is None:
+            max = len(gist_content) if len(gist_content) > 50 else 50
+            filename = gist_content[0:max]
+        else:
+            filename = self.view.file_name().split('/')[-1]
         files = {
             filename: {
             'content': gist_content
